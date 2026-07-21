@@ -246,6 +246,14 @@ h3 {
     margin-right: 8px;
 }
 
+.btn-site {
+    background: #27ae60 !important;
+}
+
+.btn-site:hover {
+    background: #2ecc71 !important;
+}
+
 #contato {
     text-align: center;
 }
