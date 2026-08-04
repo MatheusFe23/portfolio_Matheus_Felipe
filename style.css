@@ -310,3 +310,340 @@ footer {
     margin-bottom: 0.8rem;
     line-height: 1.6;
 }
+
+/* ===== SEÇÃO EXPERIÊNCIAS ===== */
+
+#experiencias {
+    background-color: var(--background-color);
+}
+
+.experiencias-subtitulo {
+    text-align: center;
+    color: #666;
+    font-size: 1.05rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+/* Timeline vertical */
+.timeline {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), #a29bfe);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.timeline-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.55);
+}
+
+.timeline-card {
+    background: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.09);
+    flex: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+}
+
+.timeline-header {
+    padding: 1.4rem 1.8rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.timeline-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+}
+
+.timeline-badge {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.badge-informal {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-andamento {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.timeline-period {
+    color: #888;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.35rem;
+    text-align: left;
+}
+
+.timeline-company {
+    font-size: 0.88rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.timeline-body {
+    padding: 1.2rem 1.8rem 1.5rem;
+}
+
+.timeline-body p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 0.9rem;
+}
+
+.timeline-body p:last-of-type {
+    margin-bottom: 1.1rem;
+}
+
+/* Tags de tecnologia */
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.tag:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ===== CARDS PROJETOS DA FACULDADE ===== */
+
+.faculdade-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-faculdade {
+    background: var(--light-color);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+}
+
+.card-faculdade:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+}
+
+.card-faculdade-img-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 240px;
+}
+
+.card-faculdade-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-faculdade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.52);
+    display: flex;
+    align-items: flex-end;
+    padding: 0.8rem;
+}
+
+.badge-grupo {
+    background: rgba(52, 152, 219, 0.92);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    backdrop-filter: blur(4px);
+}
+
+.card-faculdade-body {
+    padding: 1.6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+}
+
+.card-faculdade-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card-faculdade-header h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.card-faculdade-categoria {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-faculdade-body > p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Feature list */
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-features li {
+    font-size: 0.85rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-features li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+/* Stack tags */
+.card-faculdade-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.2rem;
+}
+
+.tag-stack {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 0.22rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.tag-stack:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Responsividade dos cards da faculdade */
+@media (max-width: 720px) {
+    .card-faculdade {
+        flex-direction: column;
+    }
+
+    .card-faculdade-img-wrap {
+        width: 100%;
+        height: 180px;
+    }
+}
